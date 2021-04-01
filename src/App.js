@@ -1,7 +1,6 @@
 import React, { useReducer } from 'react'
 import './App.css';
 
-
 const initialState = 0;
 
 const reducer = (state, action) => {
@@ -13,20 +12,11 @@ const reducer = (state, action) => {
     return state - 1;
   }
 }
-
-
-
 function App() {
-
-
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-
-  return (
-
+const [state, dispatch] = useReducer(reducer, initialState);
+return (
     <div className="app">
       <div className="app__main">
-
         <p>
           {state}
         </p>
@@ -36,7 +26,6 @@ function App() {
           }}>
             Inc
         </button>
-
           <button onClick={() => {
             dispatch({ type: "Decrement" })
           }}>
@@ -44,11 +33,7 @@ function App() {
         </button>
         </div>
       </div>
-
     </div>
-
-
   )
 }
-
 export default App
